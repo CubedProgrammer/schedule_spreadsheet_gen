@@ -81,20 +81,27 @@ function makesch()
             if(ind >= chart.children.length)
             {
                 t = en.time - (ind - chart.children.length) * duration
-                daylist = document.createElement('tr')
-                timecell = document.createElement('td')
-                txtnode = document.createTextNode(minuteToStr(t))
-                timecell.appendChild(txtnode)
-                daylist.appendChild(timecell)
-                for(var i = 0; i < 5; ++i)
+                for(var r = chart.children.length; r <= ind; ++r)
                 {
+                    daylist = document.createElement('tr')
                     timecell = document.createElement('td')
+                    txtnode = document.createTextNode(minuteToStr(t))
+                    timecell.appendChild(txtnode)
                     daylist.appendChild(timecell)
+                    for(var i = 0; i < 5; ++i)
+                    {
+                        timecell = document.createElement('td')
+                        daylist.appendChild(timecell)
+                    }
+                    chart.appendChild(daylist)
+                    t += duration
                 }
-                chart.appendChild(daylist)
+            }
+            for(var d of en.days)
+            {
+                txtnode = document.createTextNode(en.name)
+                chart.children[ind].children[d].appendChild(txtnode)
             }
         }
     }
-    console.log(arr)
-    console.log(early)
 }
