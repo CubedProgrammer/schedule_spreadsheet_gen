@@ -1,6 +1,12 @@
 DAYNAME = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 chart = document.getElementById('sch')
 txt = document.getElementById('schtxt')
+document.addEventListener('keyup', ifkeyrelease)
+function ifkeyrelease(e)
+{
+    if(e.keyCode === 13)
+        makesch()
+}
 function minuteToStr(val)
 {
     var str = Math.floor(val / 60) + ':'
