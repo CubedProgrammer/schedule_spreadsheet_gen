@@ -109,5 +109,19 @@ function makesch()
                 chart.children[ind].children[d].appendChild(txtnode)
             }
         }
+        txt.remove()
+        var invalidmsg = document.getElementsByClassName('errormsg')
+        for(var msg of invalidmsg)
+            msg.remove()
+        var buttons = document.getElementsByTagName('button')
+        for(var x of buttons)
+            x.remove()
+    }
+    else
+    {
+        var msgelem = document.createElement('h1')
+        msgelem.appendChild(document.createTextNode('Invalid schedule'))
+        msgelem.className = 'errormsg'
+        document.body.appendChild(msgelem)
     }
 }
