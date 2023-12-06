@@ -116,6 +116,7 @@ function makesch()
         var buttons = document.getElementsByTagName('button')
         for(var x of buttons)
             x.remove()
+        document.removeEventListener('keyup', ifkeyrelease)
     }
     else
     {

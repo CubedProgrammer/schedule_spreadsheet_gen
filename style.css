@@ -1,12 +1,17 @@
+body
+{
+    background-color: #121212;
+    color: #eeeeee;
+}
 table
 {
-    border: 2px solid black;
+    border: 2px solid #eeeeee;
 }
 td
 {
     font-size: 24px;
     text-align:center;
-    border: 1px solid black;
+    border: 1px solid #eeeeee;
     width: 160px;
 }
 button
