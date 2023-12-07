@@ -1,6 +1,7 @@
 DAYNAME = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 chart = document.getElementById('sch')
 txt = document.getElementById('schtxt')
+fontinput = document.getElementById('fontbox')
 document.addEventListener('keyup', ifkeyrelease)
 function ifkeyrelease(e)
 {
@@ -14,6 +15,10 @@ function minuteToStr(val)
     if(min < 10)
         str += '0'
     return str + min
+}
+function changefont()
+{
+    document.body.style.fontFamily = fontinput.value
 }
 function makesch()
 {
@@ -113,9 +118,8 @@ function makesch()
         var invalidmsg = document.getElementsByClassName('errormsg')
         for(var msg of invalidmsg)
             msg.remove()
-        var buttons = document.getElementsByTagName('button')
-        for(var x of buttons)
-            x.remove()
+        var genbutton = document.getElementById('generate')
+        genbutton.remove()
         document.removeEventListener('keyup', ifkeyrelease)
     }
     else
