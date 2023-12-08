@@ -17,6 +17,13 @@ function minuteToStr(val)
         str += '0'
     return str + min
 }
+function togglebold()
+{
+    if(chart.style.fontWeight)
+        chart.style.fontWeight = ''
+    else
+        chart.style.fontWeight = 'bold'
+}
 function changefont()
 {
     document.body.style.fontFamily = fontinput.value
