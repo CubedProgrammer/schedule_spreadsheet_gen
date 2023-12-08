@@ -5,11 +5,11 @@ body
 }
 table
 {
+    font-size: 24px;
     border: 2px solid #eeeeee;
 }
 td
 {
-    font-size: 24px;
     text-align:center;
     border: 1px solid #eeeeee;
     width: 160px;

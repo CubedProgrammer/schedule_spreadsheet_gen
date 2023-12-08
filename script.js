@@ -2,6 +2,7 @@ DAYNAME = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 chart = document.getElementById('sch')
 txt = document.getElementById('schtxt')
 fontinput = document.getElementById('fontbox')
+sizeinput = document.getElementById('sizebox')
 document.addEventListener('keyup', ifkeyrelease)
 function ifkeyrelease(e)
 {
@@ -19,6 +20,10 @@ function minuteToStr(val)
 function changefont()
 {
     document.body.style.fontFamily = fontinput.value
+}
+function changefontsz()
+{
+    chart.style.fontSize = sizeinput.value + 'px';
 }
 function makesch()
 {
