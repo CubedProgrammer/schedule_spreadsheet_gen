@@ -4,6 +4,7 @@ txt = document.getElementById('schtxt')
 fontinput = document.getElementById('fontbox')
 sizeinput = document.getElementById('sizebox')
 colourinput = document.getElementById('colourbox')
+bcolourinput = document.getElementById('bcolourbox')
 document.addEventListener('keyup', ifkeyrelease)
 function ifkeyrelease(e)
 {
@@ -24,6 +25,10 @@ function togglebold()
         chart.style.fontWeight = ''
     else
         chart.style.fontWeight = 'bold'
+}
+function changebg()
+{
+    chart.style.backgroundColor = bcolourinput.value
 }
 function changecolour()
 {
