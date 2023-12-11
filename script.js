@@ -3,7 +3,7 @@ chart = document.getElementById('sch')
 txt = document.getElementById('schtxt')
 fontinput = document.getElementById('fontbox')
 sizeinput = document.getElementById('sizebox')
-colourinput = document.getElementById('colourbox')
+fcolourinput = document.getElementById('fcolourbox')
 bcolourinput = document.getElementById('bcolourbox')
 document.addEventListener('keyup', ifkeyrelease)
 function ifkeyrelease(e)
@@ -30,9 +30,9 @@ function changebg()
 {
     chart.style.backgroundColor = bcolourinput.value
 }
-function changecolour()
+function changefg()
 {
-    chart.style.color = colourinput.value
+    chart.style.color = fcolourinput.value
 }
 function changefont()
 {
@@ -73,7 +73,10 @@ function makesch()
         }
         if(t < early)
             early = t
-        arr.push({name: name, days: day, time:t})
+        var enobj = {name: name, days: day, time: t}
+        if(enarr.length > 3)
+            enobj.background = enarr[3]
+        arr.push(enobj)
     }
     var valid = true
     for(var en of arr)
@@ -134,6 +137,8 @@ function makesch()
             {
                 txtnode = document.createTextNode(en.name)
                 chart.children[ind].children[d].appendChild(txtnode)
+                if(en.background)
+                    chart.children[ind].children[d].style.backgroundColor = en.background
             }
         }
         txt.remove()
