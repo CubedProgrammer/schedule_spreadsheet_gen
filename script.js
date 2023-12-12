@@ -76,6 +76,8 @@ function makesch()
         var enobj = {name: name, days: day, time: t}
         if(enarr.length > 3)
             enobj.background = enarr[3]
+        if(enarr.length > 4)
+            enobj.foreground = enarr[4]
         arr.push(enobj)
     }
     var valid = true
@@ -139,6 +141,8 @@ function makesch()
                 chart.children[ind].children[d].appendChild(txtnode)
                 if(en.background)
                     chart.children[ind].children[d].style.backgroundColor = en.background
+                if(en.foreground)
+                    chart.children[ind].children[d].style.color = en.foreground
             }
         }
         txt.remove()
