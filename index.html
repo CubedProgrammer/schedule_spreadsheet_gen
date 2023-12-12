@@ -20,6 +20,29 @@
             <button onclick="changebg()">Set Background</button>
         </div>
         <table id="sch"></table>
+        <div>
+            <h1>schedule_spreadsheet_gen</h1>
+            <p>Generates an HTML table to display your schedule.</p>
+            <h2>Instructions</h2>
+            <p>
+                Open index.html in your browser, input schedule into the text box, see format below.
+                it generate to get your schedule.
+            </p>
+            <h2>Format</h2>
+            <p>There is an example schedule in schedule.txt, try putting it in the box.</p>
+            <p>There should be a single number at the top, how many minutes per row.</p>
+            <p>After that, there is a list of comma separated values. Each entry should look like below.</p>
+            <span class="code">name,days,time,background,foreground</span>
+            <p>Name is self-explanitory.</p>
+            <p>
+                Days are the days this entry is to appear on, 1=Mondy, 5=Friday.
+                To put multiple consecutive days, use x-y for days x to y, inclusive.
+                2-5 would mean Tuesday through Friday.
+            </p>
+            <p>Time is the starting time of this entry, in the form <span class="code">hour:minute</span>.</p>
+            <p>Foreground and background are the colours for the cells of that entry, they are completely optional.</p>
+            <p>Multiple entries with the same name are allowed, in case one appears on non-consecutive days like Monday and Friday.</p>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
