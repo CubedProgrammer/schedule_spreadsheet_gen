@@ -3,6 +3,12 @@ body
     background-color: #121212;
     color: #eeeeee;
 }
+#gendiv
+{
+    background-color: black;
+    width: 720px;
+    margin: 0 auto;
+}
 table
 {
     font-size: 24px;
@@ -20,7 +26,7 @@ button
 }
 textarea
 {
-    font-size: 16px;
+    font-size: 24px;
 }
 .code
 {

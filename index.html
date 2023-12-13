@@ -6,12 +6,16 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <textarea id="schtxt"></textarea>
-        <button id="generate"onclick="makesch()">Generate</button>
-        <input id="fontbox">
-        <button onclick="changefont()">Set Font</button>
-        <input type="number"min="0"max="96"id="sizebox">
-        <button onclick="changefontsz()">Set Font Size</button>
+        <div id="gendiv">
+            <textarea id="schtxt"></textarea>
+            <button id="generate"onclick="makesch()">Generate</button>
+        </div>
+        <div>
+            <input id="fontbox">
+            <button onclick="changefont()">Set Font</button>
+            <input value="24"type="number"min="0"max="96"id="sizebox">
+            <button onclick="changefontsz()">Set Font Size</button>
+        </div>
         <button onclick="togglebold()">Toggle Bold</button>
         <div>
             <input id="fcolourbox">
