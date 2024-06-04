@@ -54,7 +54,7 @@ function makesch()
     {
         var enarr = en.split(',')
         var name = enarr[0], daystr = enarr[1], timestr = enarr[2]
-        var day = [], t = 0
+        var day = [], t = 0, cnt = 1;
         if(daystr.indexOf('-') === -1)
             day.push(parseInt(daystr))
         else
@@ -74,11 +74,20 @@ function makesch()
         if(t < early)
             early = t
         var enobj = {name: name, days: day, time: t}
-        if(enarr.length > 3)
-            enobj.background = enarr[3]
-        if(enarr.length > 4)
-            enobj.foreground = enarr[4]
-        arr.push(enobj)
+        switch (enarr.length) {
+            case 6:
+                enobj.foreground = enarr[5]
+            case 5:
+                enobj.background = enarr[4]
+            case 4:
+                cnt = enarr[3];
+                break;
+        }
+        for(; cnt > 0; --cnt)
+        {
+            arr.push(JSON.parse(JSON.stringify(enobj)))
+            enobj.time += duration;
+        }
     }
     var valid = true
     for(var en of arr)
