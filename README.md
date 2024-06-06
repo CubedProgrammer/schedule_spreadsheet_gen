@@ -6,11 +6,11 @@ Hit generate to get your schedule.
 ## Format
 There is an example schedule in schedule.txt, try putting it in the box.
 
-There should be a single number at the top, how many minutes per row.
+There should be a single number at the top, how many minutes per row, or for one period.
 
 After that, there is a list of comma separated values. Each entry should look like below.
 ```
-name,days,time,background,foreground
+name,days,time,count,background,foreground
 ```
 Name is self-explanitory.
 
@@ -19,6 +19,8 @@ To put multiple consecutive days, use x-y for days x to y, inclusive.
 2-5 would mean Tuesday through Friday.
 
 Time is the starting time of this entry, in the form `hour:minute`.
+
+Count is the number of periods, defaults to one. Period duration was specified at the very top.
 
 Foreground and background are the colours for the cells of that entry, they are completely optional.
 

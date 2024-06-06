@@ -35,8 +35,9 @@
             <h2>Format</h2>
             <p>There is an example schedule in schedule.txt, try putting it in the box.</p>
             <p>There should be a single number at the top, how many minutes per row.</p>
+            <p>There will be one period per row.</p>
             <p>After that, there is a list of comma separated values. Each entry should look like below.</p>
-            <span class="code">name,days,time,background,foreground</span>
+            <span class="code">name,days,time,count,background,foreground</span>
             <p>Name is self-explanitory.</p>
             <p>
                 Days are the days this entry is to appear on, 1=Mondy, 5=Friday.
@@ -44,6 +45,7 @@
                 2-5 would mean Tuesday through Friday.
             </p>
             <p>Time is the starting time of this entry, in the form <span class="code">hour:minute</span>.</p>
+            <p>Count is the number of periods, defaults to one. Period duration was specified at the very top.</p>
             <p>Foreground and background are the colours for the cells of that entry, they are completely optional.</p>
             <p>Multiple entries with the same name are allowed, in case one appears on non-consecutive days like Monday and Friday.</p>
         </div>
