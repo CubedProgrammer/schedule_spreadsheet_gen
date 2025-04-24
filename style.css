@@ -3,24 +3,55 @@ body
     background-color: #121212;
     color: #eeeeee;
 }
+button
+{
+    border-radius: 8px;
+    border: none;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 24px;
+    background-color: #222222;
+    color: #eeeeee;
+    &:hover
+    {
+        cursor: pointer;
+        background-color: #333333;
+    }
+}
+input
+{
+    border: none;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 20px;
+    background-color: #333333;
+    color: #eeeeee;
+}
 #gendiv
 {
     background-color: black;
-    width: 720px;
-    margin: 0 auto;
+    width: fit-content;
+    margin: 40px auto;
 }
-h1
+#sch
 {
-    text-align:center;
+    display: none;
 }
-h2
+div
 {
-    text-align:center;
+    width: fit-content;
+    margin: 10px auto;
+}
+h1,h2
+{
+    text-align: center;
 }
 table
 {
     font-size: 24px;
     border: 2px solid #eeeeee;
+    border-spacing: 0;
+    width: fit-content;
     margin: 10px auto;
 }
 td
@@ -29,12 +60,13 @@ td
     border: 1px solid #eeeeee;
     width: 160px;
 }
-button
-{
-    font-size: 24px;
-}
 textarea
 {
+    background-color: #222222;
+    color: #eeeeee;
+    border: none;
+    width: 36ch;
+    height: 12lh;
     font-size: 24px;
 }
 .code

@@ -8,7 +8,9 @@
     <body>
         <div id="gendiv">
             <textarea id="schtxt"></textarea>
-            <button id="generate"onclick="makesch()">Generate</button>
+            <div>
+                <button id="generate"onclick="makesch()">Generate</button>
+            </div>
         </div>
         <div>
             <input id="fontbox">
@@ -16,7 +18,9 @@
             <input value="24"type="number"min="0"max="96"id="sizebox">
             <button onclick="changefontsz()">Set Font Size</button>
         </div>
-        <button onclick="togglebold()">Toggle Bold</button>
+        <div>
+            <button onclick="togglebold()">Toggle Bold</button>
+        </div>
         <div>
             <input id="fcolourbox">
             <button onclick="changefg()">Set Foreground</button>

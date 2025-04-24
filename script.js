@@ -50,7 +50,7 @@ function makesch()
     lns.reverse().pop()
     var arr = []
     var early = 1440
-    for(var en of lns)
+    for(var en of lns.filter((l) => l.length))
     {
         var enarr = en.split(',')
         var name = enarr[0], daystr = enarr[1], timestr = enarr[2]
@@ -161,6 +161,7 @@ function makesch()
         var genbutton = document.getElementById('generate')
         genbutton.remove()
         document.removeEventListener('keyup', ifkeyrelease)
+        document.getElementById('sch').style.display = 'block'
     }
     else
     {
