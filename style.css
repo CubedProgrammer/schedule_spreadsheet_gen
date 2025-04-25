@@ -69,6 +69,10 @@ textarea
     height: 12lh;
     font-size: 24px;
 }
+label
+{
+    font-size: 2em;
+}
 .code
 {
     font-family: monospace, consolas;

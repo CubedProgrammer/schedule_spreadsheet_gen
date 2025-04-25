@@ -5,6 +5,8 @@ fontinput = document.getElementById('fontbox')
 sizeinput = document.getElementById('sizebox')
 fcolourinput = document.getElementById('fcolourbox')
 bcolourinput = document.getElementById('bcolourbox')
+fcolourinput.value = "#eeeeee"
+bcolourinput.value = "#121212"
 document.addEventListener('keyup', ifkeyrelease)
 function ifkeyrelease(e)
 {
