@@ -1,5 +1,6 @@
 DAYNAME = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 chart = document.getElementById('sch')
+heading = document.getElementById('schhead')
 txt = document.getElementById('schtxt')
 fontinput = document.getElementById('fontbox')
 sizeinput = document.getElementById('sizebox')
@@ -111,7 +112,7 @@ function makesch()
             timecell.appendChild(txtnode)
             daylist.appendChild(timecell)
         }
-        chart.appendChild(daylist)
+        heading.appendChild(daylist)
         daylist = document.createElement('tr')
         for(var i = 0; i < 6; ++i)
         {
@@ -126,7 +127,7 @@ function makesch()
         chart.appendChild(daylist)
         for(var en of arr)
         {
-            var ind = Math.floor((en.time - early) / duration) + 1
+            var ind = Math.floor((en.time - early) / duration)
             if(ind >= chart.children.length)
             {
                 t = en.time - (ind - chart.children.length) * duration
@@ -163,7 +164,7 @@ function makesch()
         var genbutton = document.getElementById('generate')
         genbutton.remove()
         document.removeEventListener('keyup', ifkeyrelease)
-        document.getElementById('sch').style.display = 'block'
+        document.getElementsByTagName('table')[0].style.display = 'block'
     }
     else
     {

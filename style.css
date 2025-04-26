@@ -33,10 +33,6 @@ input
     width: fit-content;
     margin: 40px auto;
 }
-#sch
-{
-    display: none;
-}
 div
 {
     width: fit-content;
@@ -48,6 +44,7 @@ h1,h2
 }
 table
 {
+    display: none;
     font-size: 24px;
     border: 2px solid #eeeeee;
     border-spacing: 0;
