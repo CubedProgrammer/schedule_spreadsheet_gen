@@ -2,6 +2,7 @@ body
 {
     background-color: #121212;
     color: #eeeeee;
+    font-size: 1.5em;
 }
 button
 {
@@ -68,7 +69,7 @@ textarea
 }
 label
 {
-    font-size: 2em;
+    font-size: 1.33em;
 }
 .code
 {
